@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    max-height: 80px;
+    padding: .5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 10px;
+    left: 0;
+    z-index: 999;
+    .container-img {
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        .img {
+            height: 50px;
+        }
+    }
+    .navigation {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        .navigation__ul {
+            display: flex;
+            align-items: center;
+            
+            .navigation__ul-li {
+                padding: .5rem;
+            }
+            .link {
+                font-weight: 700;
+                &:hover {
+                    color: $PRIMARY;
+                }
+            }
+        }
+    }
+    
+}
