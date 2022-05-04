@@ -1,42 +1,36 @@
 import image from '../img/Logo.svg';
-export function Header () {
-return(
-<header className='header'>
-    <div className='container-img'>
-        <img src={image} alt="Logo softopic paradise img" className='img' />
-    </div>
-    <nav className='navigation'>
-        <ul className='navigation__ul'>
-            <li className='navigation__ul-li'>
-                <a
-                href='#home'
-                className='link'>
-                    Home
-                </a>
-            </li>
-            <li className='navigation__ul-li'>
-                <a
-                href='#quienes-somos'
-                className='link'>
-                    Quienes somos?
-                </a>
-            </li>
-            <li  className='navigation__ul-li'>
-                <a
-                href='#trabajamos'
-                className='link'>
-                    Trabajamos con
-                </a>
-            </li>
-            <li  className='navigation__ul-li'>
-                <a
-                href='#crew'
-                className='link'>
-                    Nuestro equipo
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
+import {Col, Row} from 'react-bootstrap'
+
+
+export const Header = () => {
+
+    let dataHeader = [
+        {name: "Home", url:"#home"},
+        {name: "¿Quiénes somos?", url:"#quienes-somos"},
+        {name: "Trabajamos con", url:"#trabajamos"},
+        {name: "Nuestro equipo", url:"#crew"},
+    ]
+    
+    return(
+        <header>
+            <Row className='landing-header row align-items-center'>
+                <Col lg='2'>
+                    <img src={image} alt='Logo Softopic Paradise' className='img' />
+                </Col>
+                <Col lg='6'>
+                    <Row>
+                        {
+                            dataHeader.map((item, index) => (
+                                <Col key={index} className='d-flex justify-content-center'>
+                                    <a href={item.url} className='link u-text--white u-text-link'>
+                                        {item.name}
+                                    </a>
+                                </Col>
+                            ))
+                        }
+                    </Row>
+                </Col>
+            </Row>
+        </header>
     )
 }

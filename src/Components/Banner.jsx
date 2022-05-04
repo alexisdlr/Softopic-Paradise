@@ -20,7 +20,7 @@ export const Banner = () => {
                     <h1 className='title'>
                         Te ayudamos a impulsar tu negocio.
                     </h1>
-                    <p className='parag'>
+                    <p className='parag u-text--white'>
                         Ofrecemos los mejores sistemas
                         de software para satisfacer todas las necesidades de tu empresa
                     </p>

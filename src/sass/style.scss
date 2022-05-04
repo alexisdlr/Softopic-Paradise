@@ -1,7 +1,15 @@
+@import "~bootstrap/scss/bootstrap";
 @import 'variables';
 @import 'header';
 @import 'Banner';
 @import 'QuienSomos';
+@import './src/sass/Utility/Text';
+
+
+
+
+
+
 * {
     box-sizing: border-box;
 }
